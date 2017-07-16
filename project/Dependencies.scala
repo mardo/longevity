@@ -11,7 +11,9 @@ object Dependencies {
   val catsEffectDep:     ModuleID = "org.typelevel"              %% "cats-effect"           % "0.3"
   val catsIterateeDep:   ModuleID = "io.iteratee"                %% "iteratee-core"         % "0.12.0"
   val fs2CoreDep:        ModuleID = "co.fs2"                     %% "fs2-core"              % "0.9.6"
-  val journalDep:        ModuleID = "io.verizon.journal"         %% "core"                  % "3.0.18" exclude ("ch.qos.logback", "logback-classic")
+  val journalDep:        ModuleID = {
+    "io.verizon.journal" %% "core" % "3.0.18" exclude ("ch.qos.logback", "logback-classic")
+  }
   val json4sDep:         ModuleID = "org.json4s"                 %% "json4s-native"         % "3.5.2"
   val kxbmapConfigsDep:  ModuleID = "com.github.kxbmap"          %% "configs"               % "0.4.4"
   val mongodbDep:        ModuleID = "org.mongodb"                %  "mongodb-driver"        % "3.4.2"
@@ -23,5 +25,10 @@ object Dependencies {
   val streamAdapterDep:  ModuleID = "org.longevityframework"     %% "streamadapter"         % "0.1.0"
   val typekeyDep:        ModuleID = "org.longevityframework"     %% "typekey"               % "1.0.0"
   val typesafeConfigDep: ModuleID = "com.typesafe"               %  "config"                % "1.3.1"
+
+  val scalacheckDep:          ModuleID = "org.scalacheck"             %% "scalacheck"                  % "1.13.4"
+  val shapelessDep:           ModuleID = "com.chuusai"                %% "shapeless"                   % "2.3.2"
+  val scalacheckShapelessDep: ModuleID = "com.github.alexarchambault" %% "scalacheck-shapeless_1.13"   % "1.1.6"
+  val scalacheckDatetimeDep:  ModuleID = "com.47deg"                  %% "scalacheck-toolbox-datetime" % "0.2.2"
 
 }
